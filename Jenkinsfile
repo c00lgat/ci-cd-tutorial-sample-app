@@ -17,7 +17,9 @@ pipeline {
             sh '''
             pwd
             python3.8 -m venv venv 
-            source venv/bin/activate
+            ls -la
+            ls -la ./venv/ 
+            source ./venv/bin/activate
             pip install -r requirements.txt
             '''
           }
