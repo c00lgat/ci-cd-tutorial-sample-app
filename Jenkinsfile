@@ -20,6 +20,7 @@ pipeline {
             pip install -r requirements.txt
             flask db upgrade
             python3.8 seed.py
+            python3.8 -m unittest discover
             '''
           }
         }
