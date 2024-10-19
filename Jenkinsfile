@@ -31,6 +31,7 @@ pipeline {
           sh '''
           . venv/bin/activate
           pip list
+          python3.8 -m unittest discover
           '''
         }
       }
