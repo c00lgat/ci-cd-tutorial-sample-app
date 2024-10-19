@@ -29,6 +29,7 @@ pipeline {
     stage("Test Coverage") {
       steps {
         script {
+          sh '. venv/bin/activate'
           sh 'python3 -m unittest discover'
         }
       }
