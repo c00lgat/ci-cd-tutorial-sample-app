@@ -18,7 +18,6 @@ pipeline {
             python3.8 -m venv venv 
             . venv/bin/activate
             pip install -r requirements.txt
-            flask db upgrade
             python3.8 seed.py
             '''
           }
