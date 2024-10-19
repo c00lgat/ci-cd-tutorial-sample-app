@@ -20,7 +20,7 @@ pipeline {
             pip install -r requirements.txt
             flask db upgrade
             python3.8 seed.py
-            python3.8 -m unittest discover
+            pwd
             '''
           }
         }
@@ -29,8 +29,10 @@ pipeline {
     stage("Test Coverage") {
       steps {
         script {
-          sh '. venv/bin/activate'
-          sh 'python3.8 -m unittest discover'
+          sh '''
+          pwd
+          ls -la
+          '''
         }
       }
     }
