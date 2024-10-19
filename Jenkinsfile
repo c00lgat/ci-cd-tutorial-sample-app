@@ -15,6 +15,7 @@ pipeline {
         steps {
           script {
             sh '''
+            python3.8 -m pip install --upgrade pip
             python3.8 -m venv venv 
             . venv/bin/activate
             pip install -r requirements.txt
