@@ -24,6 +24,18 @@ pipeline {
           }
         }
     }
+
+    stage("CreateDB") {
+        steps {
+            script {
+                sh '''
+                #!/bin/bash 
+                service postgresql start
+                sleep 5
+                '''
+              }
+          }
+      }
   }
 
 
