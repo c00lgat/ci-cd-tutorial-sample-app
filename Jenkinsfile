@@ -36,6 +36,16 @@ pipeline {
         }
       }
     }
+
+    stage("Running the App") {
+      steps {
+        script {
+          sh '''
+          flask run
+          '''
+        }
+      }
+    }
   
   }
   
