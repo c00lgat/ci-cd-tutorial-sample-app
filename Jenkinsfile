@@ -37,6 +37,15 @@ pipeline {
       }
     }
 
+    
+    stage("Archive") {
+      steps {
+        script {
+          archiveArtifacts artifacts: './*', followSymlinks: false
+        }
+      }
+    }
+
     stage("Running the App") {
       steps {
         script {
@@ -47,6 +56,7 @@ pipeline {
         }
       }
     }
+
   
   }
   
