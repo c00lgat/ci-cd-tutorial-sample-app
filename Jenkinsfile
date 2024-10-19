@@ -25,6 +25,14 @@ pipeline {
           }
         }
     }
+
+    stage("Test Coverage") {
+      steps {
+        script {
+          python3 -m unittest discover
+        }
+      }
+    }
   
   }
   
